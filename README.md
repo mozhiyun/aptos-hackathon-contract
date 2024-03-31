@@ -1,4 +1,4 @@
-# aptos-hackathon-contract
+# Aptos-hackathon-contract
 
 ## Dependence
 Aptos CLI
