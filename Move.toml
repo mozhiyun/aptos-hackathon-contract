@@ -1,0 +1,46 @@
+[package]
+name = "cbindex"
+version = "1.0.0"
+authors = []
+
+[addresses]
+cbindex ="7ca6061866b7cc78bf3e547b4ba256d276e3b650ea2cff795d6919d4f845156c"
+admin = "1b3d43b07665057ebe476de266acf2885db6a4b8953f5b910906f0d3a02f2f8e"
+origin = "1b3d43b07665057ebe476de266acf2885db6a4b8953f5b910906f0d3a02f2f8e"
+zero = "0000000000000000000000000000000000000000000000000000000000000000"
+# These are testnet addresses https://docs.pyth.network/documentation/pythnet-price-feeds/aptos#addresses
+pyth = "0x7e783b349d3e89cf5931af376ebeadbfab855b3fa239b7ada8f5a92fbea6b387"
+deployer = "0xb31e712b26fd295357355f6845e77c888298636609e93bc9b05f0f604049f434"
+wormhole = "0x5bc11445584a763c1fa7ed39081f1b920954da14e04b32440cba863d03e19625"
+
+[dev-addresses]
+cbindex = "8759cec4d425736baf71a19e8cf98468dcb6341b5bcec9c64d9d44082ac6ec8c"
+admin = "1b3d43b07665057ebe476de266acf2885db6a4b8953f5b910906f0d3a02f2f8e"
+origin = "1b3d43b07665057ebe476de266acf2885db6a4b8953f5b910906f0d3a02f2f8e"
+zero = "0000000000000000000000000000000000000000000000000000000000000000"
+# These are testnet addresses https://docs.pyth.network/documentation/pythnet-price-feeds/aptos#addresses
+pyth = "0x7e783b349d3e89cf5931af376ebeadbfab855b3fa239b7ada8f5a92fbea6b387"
+deployer = "0xb31e712b26fd295357355f6845e77c888298636609e93bc9b05f0f604049f434"
+wormhole = "0x5bc11445584a763c1fa7ed39081f1b920954da14e04b32440cba863d03e19625"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-stdlib"
+
+[dependencies.Pyth]
+git = "https://github.com/pyth-network/pyth-crosschain.git"
+rev = "main"
+subdir = "target_chains/aptos/contracts"
+
+[dependencies.LiquidswapRouterV2]
+git = "https://github.com/pontem-network/liquidswap.git"
+rev = "main"
+subdir = "liquidswap_router_v2"
+
+[dev-dependencies]
