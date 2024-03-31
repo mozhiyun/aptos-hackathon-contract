@@ -1,15 +1,13 @@
 # aptos-hackathon-contract
-# aptos-contracts
-Aptos contracts
 
 ## Dependence
 Aptos CLI
 
 ## How to use
 
-1. Initialize your aptos account on testnet
+1. Initialize your aptos account on testnet, make sure to choose "testnet"
 ```shell
-$ aptos  init
+$ aptos init
 ```
 you will get a ".aptos" folder in your current folder.
 ```shell
@@ -30,12 +28,12 @@ $ aptos account  fund-with-faucet --account your_original_account --amount 10000
 ```shell
 $ aptos move run --function-id '0x1::resource_account::create_resource_account_and_fund' --args 'string:any string you want' 'hex:your_original_account' 'u64:10000000'
 ```
-4. Get your resourc eaccount 
+4. Get your resource account 
 ```shell
 $ aptos account list --account your_original_account
 ```
 
-Or find it on explorer: https://explorer.devnet.aptos.dev/account/your_original_account
+Or find it on explorer: https://explorer.testnet.aptos.dev/account/your_original_account
 
 ```txt
 TYPE:
