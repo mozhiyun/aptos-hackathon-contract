@@ -53,7 +53,7 @@ module cbindex::vault {
     const APTOS_USD_PRICE_FEED_IDENTIFIER : vector<u8> = x"44a93dddd8effa54ea51076c4e851b6cbbfd938e82eb90197de38fe8876bb66e";
     const BTC_USD_PRICE_FEED_IDENTIFIER : vector<u8> = x"f9c0172ba10dfa4d19088d94f5bf61d3b54d5bd7483a322a982e1373ee8ea31b";
     const ETH_USD_PRICE_FEED_IDENTIFIER : vector<u8> = x"ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6";
-    const USDC_USD_PRICE_FEED_IDENTIFIER : vector<u8> = x"41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722";
+    const USDT_USD_PRICE_FEED_IDENTIFIER : vector<u8> = x"1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588";
 
     const AUM_NAV_DECIMALS: u8 = 8;
     const SHARES_TOKEN_DECIMALS: u8 = 8;
@@ -207,12 +207,12 @@ module cbindex::vault {
             pyth_identity: APTOS_USD_PRICE_FEED_IDENTIFIER,
         });
         vector::push_back(&mut supported_assets, AssetInfo {
-            symbol: string::utf8(b"USDC"),
-            name: string::utf8(b"usdc"),
+            symbol: string::utf8(b"USDT"),
+            name: string::utf8(b"Tether"),
             decimals: 6,
-            type_name: string::utf8(b"0xb4d7b2466d211c1f4629e8340bb1a9e75e7f8fb38cc145c54c5c9f9d5017a318::coins_extended::USDC"),
+            type_name: string::utf8(b"0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9::coins::USDT"),
             vault_balance: 0,
-            pyth_identity: USDC_USD_PRICE_FEED_IDENTIFIER,
+            pyth_identity: USDT_USD_PRICE_FEED_IDENTIFIER,
         });
         move_to(&resource_signer, VaultInfo {
             signer_cap,
