@@ -550,8 +550,7 @@ module cbindex::vault {
         }else {
             coin::register<Y>(&vault_signer);
         };
-        // call pancake swap to swap token
-        // router::swap_exact_input<X,Y>(&vault_signer, x_in, y_min_out);
+        // call swap to swap token
         let coin_y = router_v2::swap_exact_coin_for_coin<X,Y,Uncorrelated>(
             coin::withdraw<X>(&vault_signer, x_in),
             y_min_out
